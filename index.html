@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link href="http://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet" />
+	<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+	<title>Metodo Bisección</title>
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="#">Análisis Numérico</a></h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li class="active"><a href="#" accesskey="1" title="">Inicio</a></li>
+			</ul>
+		</div>
+	</div>	
+	<div id="banner" class="container">
+		<div class="title">
+			<h2>Método de Bisección</h2>
+			<span class="byline">Algoritmo de búsqueda de raíces que trabaja dividiendo el intervalo a la mitad y seleccionando el subintervalo que tiene la raíz.</span>
+		</div>
+		<ul class="actions">
+			<li><a href="#welcome" class="button">Ir al método</a></li>
+		</ul>
+	</div>
+</div>
+<div id="wrapper">
+	<div id="three-column" class="container">
+		<div class="title">
+			<h2>Ventajas de este método</h2>
+		</div>
+		<div class="boxA">
+			<span class="fa fa-smile-o"></span>
+			<p>Uno de los métodos más sencillos y de fácil intuición para resolver ecuaciones en una variable.</p>
+		</div>
+		<div class="boxB">
+			<span class="fa fa-cogs"></span>
+			<p>La bisección converge linealmente, por lo cual es un poco lento. Sin embargo, se garantiza la convergencia si f(a) y f(b) tienen distinto signo.</p>
+		</div>
+		<div class="boxC">
+			<span class="fa fa-wrench"></span>
+			<p> Es menos eficiente que el método de Newton, pero es mucho más seguro para garantizar la convergencia.</p>
+		</div>
+	</div>
+</div>
+<div id="welcome">
+	<div class="container">
+		<div class="title">
+			<h2>Implementación del método</h2>
+			<span class="byline">
+				Para utilizarlo tendrá que ingresar la ecuación, los puntos inicio y el error esperado que se requiera.
+			</span>
+			<br>
+			<h2>Ecuación</h3> 
+			<span class="byline">
+				Ingrese la ecuación que se desee buscar la raíz.
+			</span><br>
+			<input type="text" id="equation">
+		</div>
+	</div>
+
+	<div id="three-column" class="three">
+		<div class="boxA">
+			<p>Ingrese X1 </p>
+			<input type="text" id="x1">
+		</div>
+
+		<div class="boxB">
+			<p>Ingrese Xu</p>
+			<input type="text" id="xu">
+		</div>
+
+		<div class="BoxC">
+			<p>Error esperado</p>
+			<input type="text" id="errormargin">
+		</div>
+	</div>
+
+	<a href="#steps" class="button" onclick="resolver()">Resolver</a> <br><br>
+
+	<div id="steps">
+		<div class="container">
+			<h2>Pasos</h2>
+			<div class="pasos">
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="js/math.js"></script>
+<script type="text/javascript" src="js/bisection.js"></script>
+
+</body>
+</html>
