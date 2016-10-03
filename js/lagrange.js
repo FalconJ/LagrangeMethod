@@ -1,8 +1,12 @@
-// Calculate the Lagrange interpolationtyped into input boxes on the
-//and displays the result in a span on the page
+$(document).ready(function(){
+	$(".BoxC").hide();
+});
+
 function obtainData() {
-	var xValues = $("#xvalues").val();
-	var yValues = $("#yvalues").val();
+	$(".pasos").empty();
+
+	var xValues = $("#xValues").val();
+	var yValues = $("#yValues").val();
 	var point = $("#point").val();
 	var answer = $("#answer").val();
 
@@ -10,7 +14,8 @@ function obtainData() {
 	var cleanY = yValues.split(" ");
 
 	var result = lagrange(cleanX, cleanY, point);
-	answer.innerHTML = result;
+
+	$(".pasos").append("<span>" + result + "</span><br>");
 }
 
 function lagrange(cleanX, cleanY, point) {
@@ -22,10 +27,10 @@ function lagrange(cleanX, cleanY, point) {
 		prod=1;
 		for (var j=0; j<cleanX.length;j++){
 		   if (j != i){
-			prod *= (x - cleanX[j])/(cleanX[i]-cleanX[j]);
+			prod *= (point - cleanX[j])/(cleanX[i]-cleanX[j]);
 		   }
 		}
-		
+
 		sum += prod * cleanY[i];
 	}
 	return sum;
